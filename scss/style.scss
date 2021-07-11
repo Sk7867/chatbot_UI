@@ -61,12 +61,6 @@ body {
     &.active {
       opacity: 1;
       height: 629px;
-
-      & ~ #element1 {
-        opacity: 0;
-        animation: fadeIn 1s ease-in-out 0s forwards;
-        animation-delay: 3s;
-      }
     }
 
     @media screen and (min-width: 1000px) {

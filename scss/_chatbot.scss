@@ -24,11 +24,6 @@ body {
         height: 39px;
         left: 56px;
         top: 19px;
-        opacity: 0;
-
-        .active {
-          animation: fadeIn 3s;
-        }
       }
 
       .hello {
@@ -178,14 +173,5 @@ body {
         }
       }
     }
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
