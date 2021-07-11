@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+
+$font: 'DM Sans', sans-serif;
+$primary_color: linear-gradient(123.75deg, #f5821f 1.87%, #ff5c00 120.46%);
+$secondary_color: hsla(0, 0%, 100%, 1);
+$text_color: #2d2d2d;
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}

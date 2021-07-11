@@ -1,0 +1,191 @@
+body {
+  background: $secondary_color;
+  overflow: hidden;
+
+  .chat_frame_container {
+    .top {
+      position: absolute;
+      width: 416px;
+      height: 278px;
+      left: 0px;
+      top: -1px;
+      background: linear-gradient(123.75deg, #f5821f 1.87%, #ff5c00 120.46%);
+
+      .iris {
+        text-transform: uppercase;
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 39px;
+        color: $secondary_color;
+        position: absolute;
+        width: 53px;
+        height: 39px;
+        left: 56px;
+        top: 19px;
+        opacity: 0;
+
+        .active {
+          animation: fadeIn 3s;
+        }
+      }
+
+      .hello {
+        text-transform: capitalize;
+        font-family: $font;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 29px;
+        position: absolute;
+        width: 54px;
+        height: 29px;
+        left: 56px;
+        top: 65px;
+        color: $secondary_color;
+
+        img {
+          position: absolute;
+          left: 60px;
+          top: 0px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .descrip {
+        font-family: $font;
+        font-weight: 500;
+        color: $secondary_color;
+        font-size: 18px;
+        line-height: 23px;
+        position: absolute;
+        width: 228px;
+        height: 46px;
+        left: 56px;
+        top: 104px;
+      }
+    }
+
+    .bottom {
+      .bot_icon {
+        position: absolute;
+        font-size: 10px;
+        width: 67px;
+        height: 67px;
+        left: 38px;
+        top: 165px;
+        background: linear-gradient(180deg, #ff7600 0%, #ff5c00 100%);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 0px hsla(0, 0%, 0%, 0.15);
+
+        .fa-robot {
+          font-size: 35px;
+          z-index: 20;
+          position: absolute;
+          left: 10px;
+          top: 13px;
+          color: $secondary_color;
+        }
+      }
+
+      .content {
+        position: absolute;
+        width: 390px;
+        height: 400px;
+        left: 13px;
+        top: 199px;
+        background: $secondary_color;
+        border: 1px solid $secondary_color;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+
+        .faq {
+          width: 254px;
+          height: 18px;
+          font-family: $font;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 14px;
+          color: $text_color;
+          line-height: 18px;
+          margin-top: 50px;
+          margin-left: 26px;
+          display: flex;
+          flex-flow: row;
+          align-content: center;
+
+          .question_mark {
+            margin-left: 7px;
+          }
+
+          &_question {
+            border: 1px solid #e1e1e1;
+            padding: 15px;
+            width: 339px;
+            height: 50px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 14px 38px 15px 5px;
+            margin-top: 10px;
+            margin-left: 26px;
+
+            .ques {
+              font-family: $font;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 21px;
+              letter-spacing: 0em;
+              text-align: left;
+              display: flex;
+
+              .bullet_point {
+                margin: 0px 7px 0px 5px;
+              }
+            }
+          }
+        }
+        button {
+          width: 268px;
+          height: 44px;
+          margin: 29px 61px 21px;
+          background: #fff;
+          box-shadow: 0px 4px 5px 0px hsla(0, 0%, 0%, 0.1);
+          border-radius: 100px;
+          font-size: 14px;
+          font-family: $font;
+          font-style: normal;
+          font-weight: 500;
+          cursor: pointer;
+          border: 1px solid hsla(0, 0%, 82%, 1);
+          display: flex;
+          flex-flow: row;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            margin-right: 5px;
+            width: 14px;
+            height: 14px;
+            color: hsla(0, 0%, 18%, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

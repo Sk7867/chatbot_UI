@@ -1,0 +1,86 @@
+@import 'config';
+@import 'chatbot';
+@import 'fadeIn';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: rgb(209, 206, 206);
+
+  .chat_icon {
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+    font-size: 25px;
+    background-color: #ff5c00;
+    color: $secondary_color;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    padding: 10px;
+
+    .fa-comments {
+      display: block;
+
+      &.active {
+        display: none;
+      }
+    }
+
+    .fa-times {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      right: 20px;
+      font-size: 30px;
+    }
+  }
+
+  .chat_frame {
+    position: fixed;
+    right: -55px;
+    bottom: -40px;
+    width: 416px;
+    height: 0px;
+    background-color: $secondary_color;
+    z-index: 200;
+    border-radius: 18px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0.7);
+
+    &.active {
+      opacity: 1;
+      height: 629px;
+
+      & ~ #element1 {
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out 0s forwards;
+        animation-delay: 3s;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      right: -20px;
+      bottom: -5px;
+      max-width: 416px;
+      max-height: 629px;
+      transform: scale(0.8);
+    }
+
+    @media screen and (min-width: 1300px) {
+      right: -8px;
+      bottom: 25px;
+      transform: scale(0.9);
+    }
+  }
+}
